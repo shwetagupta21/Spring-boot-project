@@ -1,0 +1,55 @@
+server:
+  port: 8082
+
+spring:
+  config:
+    activate:
+      on-profile: qa
+
+---
+spring:
+  profile: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/departmentmanagement
+    password: Shweta@10
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+welcome:
+  message: Welcome to Spring boot project!!
+
+---
+spring:
+  profile: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/departmentmanagement_prod
+    password: Shweta@10
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+welcome:
+  message: Welcome to Spring boot project!!
+
+
+---
+
+spring:
+  profile: qa
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/departmentmanagement_qa
+    password: Shweta@10
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+welcome:
+  message: Welcome to Spring boot project!!
+
